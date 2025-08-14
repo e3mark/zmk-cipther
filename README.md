@@ -60,6 +60,7 @@ The configuration uses the following pin assignments compatible with the Skelety
 - Row 0: Pin 21
 - Row 1: Pin 18  
 - Row 2: Pin 5
+- Row 3: Pin 4
 
 **Columns:**
 - Left half: Pins 19, 20, 10, 6, 7
