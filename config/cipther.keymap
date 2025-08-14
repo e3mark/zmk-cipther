@@ -4,27 +4,11 @@
  * SPDX-License-Identifier: MIT
  */
  
-#include <behaviors/rgbled_widget.dtsi>
-
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/keys.h>
 
 / {
-    combos {
-        compatible = "zmk,combos";
-
-        bluetooth {
-            bindings = <&mo 0>;
-            key-positions = <41 36>;
-        };
-
-        bt2 {
-            bindings = <&mo 0>;
-            key-positions = <48 53>;
-        };
-    };
-
     behaviors {
         hml: hml {
             compatible = "zmk,behavior-hold-tap";
