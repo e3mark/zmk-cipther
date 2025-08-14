@@ -1,0 +1,18 @@
+# SPDX-License-Identifier: MIT
+
+if SHIELD_CIPTHER_LEFT
+
+config ZMK_KEYBOARD_NAME
+    default "Cipther"
+
+config ZMK_SPLIT_ROLE_CENTRAL
+    default y
+
+endif
+
+if SHIELD_CIPTHER_LEFT || SHIELD_CIPTHER_RIGHT
+
+config ZMK_SPLIT
+    default y
+
+endif

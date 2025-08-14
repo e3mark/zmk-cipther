@@ -1,0 +1,4 @@
+# SPDX-License-Identifier: MIT
+
+CONFIG_ZMK_KEYBOARD_NAME="Cipther Left"
+CONFIG_ZMK_SPLIT_ROLE_CENTRAL=y
