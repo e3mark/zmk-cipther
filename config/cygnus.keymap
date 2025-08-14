@@ -1,0 +1,130 @@
+#include <behaviors/rgbled_widget.dtsi>
+#include <behaviors.dtsi>
+#include <dt-bindings/zmk/bt.h>
+#include <dt-bindings/zmk/keys.h>
+
+/ {
+    combos {
+        compatible = "zmk,combos";
+
+        bluetooth {
+            bindings = <&mo 0>;
+            key-positions = <41 36>;
+        };
+
+        bt2 {
+            bindings = <&mo 0>;
+            key-positions = <48 53>;
+        };
+    };
+
+    behaviors {
+        hml: hml {
+            compatible = "zmk,behavior-hold-tap";
+            label = "HOME_ROW_LEFT";
+            bindings = <&kp>, <&kp>;
+
+            #binding-cells = <2>;
+            hold-trigger-key-positions = <32 0 1 3 2 4 5 6 14 15 16 17 18 19 20 28 29 30 31 33 34 42 43 44 45 46 47 56 57 58 48>;
+            tapping-term-ms = <180>;
+            quick-tap-ms = <175>;
+            require-prior-idle-ms = <150>;
+            flavor = "balanced";
+            hold-trigger-on-release;
+        };
+
+        hmr: hmr {
+            compatible = "zmk,behavior-hold-tap";
+            label = "HOME_ROW_RIGHT";
+            bindings = <&kp>, <&kp>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <180>;
+            quick-tap-ms = <175>;
+            require-prior-idle-ms = <150>;
+            flavor = "balanced";
+            hold-trigger-key-positions = <37 7 8 9 10 11 12 13 21 22 23 24 25 26 27 35 36 38 39 40 41 55 54 53 52 51 50 69 68 67 49>;
+            hold-trigger-on-release;
+        };
+    };
+
+    keymap {
+        compatible = "zmk,keymap";
+
+        main {
+            // ┌─────┬─────┬─────┬─────┬─────┬─────┬─────┐     ┌─────┬─────┬─────┬─────┬─────┬─────┬─────┐
+            // │ ESC │  1  │  2  │  3  │  4  │  5  │  =  │     │  -  │  6  │  7  │  8  │  9  │  0  │BKSP │
+            // ├─────┼─────┼─────┼─────┼─────┼─────┼─────┤     ├─────┼─────┼─────┼─────┼─────┼─────┼─────┤
+            // │ TAB │  Q  │  W  │  E  │  R  │  T  │  [  │     │  ]  │  Y  │  U  │  I  │  O  │  P  │  \  │
+            // ├─────┼─────┼─────┼─────┼─────┼─────┼─────┤     ├─────┼─────┼─────┼─────┼─────┼─────┼─────┤
+            // │CAPS │  A  │  S  │  D  │  F  │  G  │  `  │     │  '  │  H  │  J  │  K  │  L  │  ;  │ENTER│
+            // ├─────┼─────┼─────┼─────┼─────┼─────┼─────┤     ├─────┼─────┼─────┼─────┼─────┼─────┼─────┤
+            // │LSHFT│  Z  │  X  │  C  │  V  │  B  │ HOME│     │ END │  N  │  M  │  ,  │  .  │  /  │RSHFT│
+            // ├─────┼─────┼─────┼─────┼─────┼─────┼─────┤     ├─────┼─────┼─────┼─────┼─────┼─────┼─────┤
+            // │LCTRL│LWIN │LALT │ DEL │ SPC │ FN1 │ FN2 │     │ FN2 │ FN1 │ SPC │ DEL │RALT │RWIN │RCTRL│
+            // └─────┴─────┴─────┴─────┴─────┴─────┴─────┘     └─────┴─────┴─────┴─────┴─────┴─────┴─────┘
+
+            bindings = <
+&kp EQUAL       &kp N1     &kp N2    &kp N3          &kp N4             &kp N5         &to 1          &kp DEL                   &kp N6     &kp N7        &kp N8          &kp N9            &kp N0             &kp MINUS
+&kp ESC         &kp Q      &kp W     &kp E           &kp R              &kp T          &kp PAGE_UP    &kp HOME                  &kp Y      &kp U         &kp I           &kp O             &kp P              &kp BSLH
+&kp TAB         &kp A      &kp S     &kp D           &hml LEFT_SHIFT F  &kp G          &kp PAGE_DOWN  &kp END                   &kp H      &hmr RSHFT J  &kp K           &kp L             &kp SEMI           &kp SQT
+&kp LEFT_SHIFT  &kp Z      &kp X     &kp C           &kp V              &kp B          &kp LGUI       &hmr RIGHT_ALT RIGHT_ALT  &kp N      &kp M         &kp COMMA       &kp DOT           &kp FSLH           &kp RIGHT_SHIFT
+&none           &kp GRAVE  &kp CAPS  &kp LEFT_ARROW  &kp RIGHT_ARROW    &kp BACKSPACE  &kp LCTRL      &kp ENTER                 &kp SPACE  &kp UP_ARROW  &kp DOWN_ARROW  &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &none
+            >;
+        };
+
+        colmakdh {
+            bindings = <
+&trans  &trans  &trans  &trans  &trans         &trans  &to 0   &trans  &trans  &trans         &trans  &trans  &trans         &trans
+&trans  &trans  &trans  &kp F   &kp P          &kp B   &trans  &trans  &kp J   &kp L          &kp U   &kp Y   &kp SEMICOLON  &trans
+&trans  &trans  &kp R   &kp S   &hml LSHIFT T  &trans  &trans  &trans  &kp M   &hmr RSHIFT N  &kp E   &kp I   &kp O          &trans
+&trans  &trans  &trans  &trans  &kp D          &kp V   &trans  &trans  &kp K   &kp H          &trans  &trans  &trans         &trans
+&trans  &trans  &trans  &trans  &trans         &trans  &trans  &trans  &trans  &trans         &trans  &trans  &trans         &trans
+            >;
+        };
+
+        symbols {
+            // ┌─────┬─────┬─────┬─────┬─────┬─────┬─────┐     ┌─────┬─────┬─────┬─────┬─────┬─────┬─────┐
+            // │  ~  │ F1  │ F2  │ F3  │ F4  │ F5  │ F11 │     │ F12 │ F6  │ F7  │ F8  │ F9  │ F10 │ DEL │
+            // ├─────┼─────┼─────┼─────┼─────┼─────┼─────┤     ├─────┼─────┼─────┼─────┼─────┼─────┼─────┤
+            // │     │     │ UP  │     │     │     │ INS │     │PSCRN│     │     │     │     │     │     │
+            // ├─────┼─────┼─────┼─────┼─────┼─────┼─────┤     ├─────┼─────┼─────┼─────┼─────┼─────┼─────┤
+            // │     │LEFT │DOWN │RIGHT│     │     │SLCK │     │PAUSE│LEFT │DOWN │ UP  │RIGHT│     │     │
+            // ├─────┼─────┼─────┼─────┼─────┼─────┼─────┤     ├─────┼─────┼─────┼─────┼─────┼─────┼─────┤
+            // │     │     │     │     │     │     │PGUP │     │PGDN │     │     │     │     │     │     │
+            // ├─────┼─────┼─────┼─────┼─────┼─────┼─────┤     ├─────┼─────┼─────┼─────┼─────┼─────┼─────┤
+            // │     │     │     │     │     │     │     │     │     │     │     │     │     │     │     │
+            // └─────┴─────┴─────┴─────┴─────┴─────┴─────┘     └─────┴─────┴─────┴─────┴─────┴─────┴─────┘
+
+            bindings = <
+&kp F11  &kp F1  &kp F2          &kp F3          &kp F4           &kp F5         &to 2   &none   &kp F6                &kp F7            &kp F8            &kp F9            &kp F10                &kp F12
+&none    &none   &kp HOME        &kp UP_ARROW    &kp END          &kp PAGE_UP    &none   &none   &kp TILDE             &kp RS(NUMBER_7)  &kp RS(NUMBER_8)  &kp RS(NUMBER_9)  &kp RS(NUMBER_0)       &none
+&none    &none   &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW  &kp PAGE_DOWN  &to 2   &to 2   &kp LEFT_BRACKET      &kp RS(NUMBER_4)  &kp RS(NUMBER_5)  &kp RS(NUMBER_6)  &kp RIGHT_BRACKET      &none
+&none    &none   &kp K_CUT       &kp K_COPY      &kp K_PASTE      &none          &trans  &none   &kp RS(LEFT_BRACKET)  &kp RS(NUMBER_1)  &kp RS(NUMBER_2)  &kp RS(NUMBER_3)  &kp RS(RIGHT_BRACKET)  &none
+&none    &none   &trans          &trans          &trans           &trans         &trans  &trans  &trans                &none             &none             &none             &none                  &none
+            >;
+        };
+
+        bluetooth {
+            // ┌─────┬─────┬─────┬─────┬─────┬─────┬─────┐     ┌─────┬─────┬─────┬─────┬─────┬─────┬─────┐
+            // │     │ BT1 │ BT2 │ BT3 │ BT4 │ BT5 │BTCLR│     │NUMLK│  =  │  /  │  *  │  -  │     │     │
+            // ├─────┼─────┼─────┼─────┼─────┼─────┼─────┤     ├─────┼─────┼─────┼─────┼─────┼─────┼─────┤
+            // │     │     │     │     │     │     │     │     │     │  7  │  8  │  9  │  +  │     │     │
+            // ├─────┼─────┼─────┼─────┼─────┼─────┼─────┤     ├─────┼─────┼─────┼─────┼─────┼─────┼─────┤
+            // │     │     │     │     │     │     │     │     │     │  4  │  5  │  6  │  +  │     │     │
+            // ├─────┼─────┼─────┼─────┼─────┼─────┼─────┤     ├─────┼─────┼─────┼─────┼─────┼─────┼─────┤
+            // │     │     │     │     │     │     │     │     │     │  1  │  2  │  3  │ENTER│     │     │
+            // ├─────┼─────┼─────┼─────┼─────┼─────┼─────┤     ├─────┼─────┼─────┼─────┼─────┼─────┼─────┤
+            // │     │     │     │     │     │     │     │     │     │  0  │  0  │  .  │ENTER│     │     │
+            // └─────┴─────┴─────┴─────┴─────┴─────┴─────┘     └─────┴─────┴─────┴─────┴─────┴─────┴─────┘
+
+            bindings = <
+&trans  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4  &bt BT_CLR  &none   &none            &none      &none      &none      &none         &none
+&trans  &trans        &trans        &trans        &trans        &trans        &trans      &none   &kp KP_DIVIDE    &kp KP_N7  &kp KP_N8  &kp KP_N9  &kp KP_MINUS  &none
+&trans  &trans        &trans        &trans        &trans        &trans        &to 2       &to 2   &kp KP_MULTIPLY  &kp KP_N4  &kp KP_N5  &kp KP_N6  &kp KP_PLUS   &none
+&trans  &trans        &trans        &trans        &trans        &trans        &trans      &trans  &kp KP_N0        &kp KP_N1  &kp KP_N2  &kp KP_N3  &kp KP_DOT    &none
+&none   &none         &trans        &trans        &none         &trans        &trans      &trans  &trans           &none      &none      &none      &none         &none
+            >;
+        };
+    };
+};
