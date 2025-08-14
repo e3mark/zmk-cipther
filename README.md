@@ -57,14 +57,13 @@ The firmware is automatically built using GitHub Actions when you push changes t
 The configuration uses the following pin assignments compatible with the Skeletyl matrix:
 
 **Rows (both halves):**
-- Row 0: Pin 4
-- Row 1: Pin 5  
-- Row 2: Pin 6
-- Row 3: Pin 7
+- Row 0: Pin 21
+- Row 1: Pin 18  
+- Row 2: Pin 5
 
 **Columns:**
-- Left half: Pins 21, 20, 19, 18, 15
-- Right half: Pins 15, 18, 19, 20, 21 (reversed)
+- Left half: Pins 19, 20, 10, 6, 7
+- Right half: Pins 7, 6, 10, 20, 19 (reversed)
 
 ## Customization
 
