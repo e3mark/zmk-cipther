@@ -75,19 +75,19 @@
             //                  | GUI | LWR | SPC |   | ENT | RSE  | ALT |
 
             bindings = <
-&lt 6 Q       &kp W            &kp E                &kp R              &kp T      &kp Y      &kp U               &kp I             &kp O             &lt 6 P
-&hml LCTRL A  &hml LEFT_ALT S  &hml RS(LEFT_GUI) D  &hml LEFT_SHIFT F  &kp G      &kp H      &hmr RIGHT_SHIFT J  &hmr RIGHT_GUI K  &hmr RIGHT_ALT L  &hmr RCTRL SEMICOLON
-&kp Z         &kp X            &kp C                &kp V              &kp B      &kp N      &kp M               &kp COMMA         &kp DOT           &kp FSLH
-                               &lt 3 TAB            &lt 2 BACKSPACE    &lt 3 TAB  &kp ENTER  &kp SPACE           &kp ENTER
+&lt 6 Q       &kp W            &kp E            &kp R              &kp T      &kp Y        &kp U               &kp I             &kp P             &lt 6 SEMICOLON
+&hml LCTRL A  &hml LEFT_ALT S  &hml LEFT_GUI D  &hml LEFT_SHIFT F  &kp G      &kp H        &hmr RIGHT_SHIFT J  &hmr RIGHT_GUI K  &hmr RIGHT_ALT L  &hmr RCTRL O
+&kp Z         &kp X            &kp C            &kp V              &kp B      &kp N        &kp M               &kp COMMA         &kp DOT           &kp FSLH
+                               &lt 3 TAB        &lt 2 BACKSPACE    &lt 3 TAB  &lt 3 ENTER  &kp SPACE           &lt 3 ENTER
             >;
         };
 
         Colemak-dh {
             bindings = <
-&lt 6 Q          &kp W            &kp F         &kp P              &kp B      &kp J      &kp L               &kp U         &kp Y             &kp SEMICOLON
-&hml LEFT_GUI A  &hml LEFT_ALT R  &hml LCTRL S  &hml LEFT_SHIFT T  &kp G      &kp M      &hmr RIGHT_SHIFT N  &hmr RCTRL E  &hmr RIGHT_ALT I  &hmr RIGHT_GUI O
-&kp Z            &kp X            &kp C         &kp D              &kp V      &kp K      &kp H               &kp COMMA     &kp DOT           &kp FSLH
-                                  &lt 3 TAB     &lt 2 BACKSPACE    &lt 3 TAB  &kp ENTER  &kp SPACE           &kp ENTER
+&lt 6 Q       &kp W            &kp F            &kp P              &kp B      &kp J        &kp L               &kp U             &kp Y             &kp SEMICOLON
+&hml LCTRL A  &hml LEFT_ALT R  &hml LEFT_GUI S  &hml LEFT_SHIFT T  &kp G      &kp M        &hmr RIGHT_SHIFT N  &hmr RIGHT_GUI E  &hmr RIGHT_ALT I  &hmr RCTRL O
+&kp Z         &kp X            &kp C            &kp D              &kp V      &kp K        &kp H               &kp COMMA         &kp DOT           &kp FSLH
+                               &lt 3 TAB        &lt 2 BACKSPACE    &lt 3 TAB  &lt 3 ENTER  &kp SPACE           &lt 3 ENTER
             >;
         };
 
@@ -99,19 +99,19 @@
             //                  | GUI |     | SPC |   | ENT |     | ALT |
 
             bindings = <
-&kp ESC         &kp HOME        &kp UP_ARROW  &kp END          &kp PAGE_UP    &kp LEFT_BRACKET  &kp N7        &kp N8        &kp N9        &kp RIGHT_BRACKET
-&kp LEFT_SHIFT  &kp LEFT_ARROW  &kp DOWN      &kp RIGHT_ARROW  &kp PAGE_DOWN  &kp EQUAL         &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6  &kp SINGLE_QUOTE
-&kp LC(Z)       &kp LC(X)       &kp LC(C)     &kp LC(V)        &kp CAPS       &kp GRAVE         &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp BACKSLASH
-                                &trans        &trans           &trans         &kp MINUS         &kp NUMBER_0  &kp DOT
+&kp ESC         &kp HOME        &kp UP_ARROW  &kp END          &kp PAGE_UP    &kp SLASH  &kp N7        &kp N8        &kp N9        &kp ASTERISK
+&kp LEFT_SHIFT  &kp LEFT_ARROW  &kp DOWN      &kp RIGHT_ARROW  &kp PAGE_DOWN  &kp PLUS   &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6  &kp EQUAL
+&kp LC(Z)       &kp LC(X)       &kp LC(C)     &kp LC(V)        &kp CAPS       &kp MINUS  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp COMMA
+                                &trans        &trans           &trans         &trans     &kp NUMBER_0  &kp DOT
             >;
         };
 
         Symbols {
             bindings = <
-&none         &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &kp NUMBER_0  &kp LEFT_BRACE  &kp AMPERSAND         &kp ASTERISK           &kp LEFT_PARENTHESIS  &kp RBRC
-&none         &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6  &kp ENTER     &kp PLUS        &kp DOLLAR            &kp PERCENT            &kp CARET             &kp DOUBLE_QUOTES
-&kp NUMBER_0  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &none         &kp TILDE       &kp EXCLAMATION       &kp AT_SIGN            &kp HASH              &kp PIPE
-                            &trans        &trans        &trans        &kp UNDERSCORE  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS
+&kp EXCLAMATION  &kp AT_SIGN  &kp HASH          &kp DOLLAR         &kp PERCENT  &kp CARET          &kp AMPERSAND     &kp ASTERISK     &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS
+&kp QUESTION     &kp PERIOD   &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp PLUS     &kp EQUAL          &kp LEFT_BRACE    &kp RIGHT_BRACE  &kp COLON             &kp SEMICOLON
+&kp TILDE        &kp GRAVE    &kp SLASH         &kp BACKSLASH      &kp PIPE     &kp MINUS          &kp UNDERSCORE    &kp COMMA        &kp LESS_THAN         &kp GREATER_THAN
+                              &trans            &trans             &trans       &kp DOUBLE_QUOTES  &kp SINGLE_QUOTE  &trans
             >;
         };
 
