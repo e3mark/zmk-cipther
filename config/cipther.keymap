@@ -45,13 +45,13 @@
         func {
             bindings = <&none>;
             key-positions = <2 3>;
-            layers = <4>;
+            layers = <5>;
         };
 
         sym {
             bindings = <&none>;
             key-positions = <22 23>;
-            layers = <3>;
+            layers = <4>;
         };
     };
 
@@ -75,19 +75,19 @@
             //                  | GUI | LWR | SPC |   | ENT | RSE  | ALT |
 
             bindings = <
-&lt 6 Q          &kp W            &kp E      &kp R              &kp T      &kp Y        &kp U               &kp I               &kp O    &lt 6 P
-&lt 3 A          &kp S            &kp D      &hml LEFT_SHIFT F  &kp G      &kp H        &hmr RIGHT_SHIFT J  &kp K               &kp L    &lt 3 SEMICOLON
+&lt 7 Q          &kp W            &kp E      &kp R              &kp T      &kp Y        &kp U               &kp I               &kp O    &lt 7 P
+&lt 4 A          &kp S            &kp D      &hml LEFT_SHIFT F  &kp G      &kp H        &hmr RIGHT_SHIFT J  &kp K               &kp L    &lt 4 SEMICOLON
 &hml LEFT_GUI Z  &hml LEFT_ALT X  &kp C      &kp V              &kp B      &kp N        &kp M               &kp COMMA           &kp DOT  &hml RIGHT_GUI SLASH
-                                  &lt 3 TAB  &lt 2 BACKSPACE    &kp LCTRL  &lt 4 ENTER  &lt 2 SPACE         &lt 3 SINGLE_QUOTE
+                                  &lt 4 TAB  &lt 2 BACKSPACE    &kp LCTRL  &lt 5 ENTER  &lt 2 SPACE         &lt 4 SINGLE_QUOTE
             >;
         };
 
         Colemak-dh {
             bindings = <
-&lt 6 Q       &kp W  &kp F      &kp P              &kp B           &kp J        &kp L               &kp U        &kp Y    &kp SEMICOLON
+&lt 7 Q       &kp W  &kp F      &kp P              &kp B           &kp J        &kp L               &kp U        &kp Y    &kp SEMICOLON
 &hml LCTRL A  &kp R  &kp S      &hml LEFT_SHIFT T  &kp G           &kp M        &hmr RIGHT_SHIFT N  &kp E        &kp I    &hmr RCTRL O
 &kp Z         &kp X  &kp C      &kp D              &kp V           &kp K        &kp H               &kp COMMA    &kp DOT  &kp FSLH
-                     &lt 3 TAB  &lt 2 BACKSPACE    &lt 3 LEFT_GUI  &lt 3 ENTER  &kp SPACE           &lt 3 ENTER
+                     &lt 4 TAB  &lt 2 BACKSPACE    &lt 4 LEFT_GUI  &lt 4 ENTER  &kp SPACE           &lt 4 ENTER
             >;
         };
 
@@ -99,10 +99,19 @@
             //                  | GUI |     | SPC |   | ENT |     | ALT |
 
             bindings = <
-&kp ESC         &kp HOME        &kp UP_ARROW    &kp END          &kp PAGE_UP    &kp COMMA  &kp N7        &kp N8        &kp N9        &kp ASTERISK
-&kp LEFT_SHIFT  &kp LEFT_ARROW  &kp DOWN        &kp RIGHT_ARROW  &kp PAGE_DOWN  &kp PLUS   &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6  &kp EQUAL
-&kp PLUS        &kp EQUAL       &kp UNDERSCORE  &kp MINUS        &kp CAPS       &kp MINUS  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp SLASH
-                                &trans          &trans           &trans         &trans     &kp NUMBER_0  &kp DOT
+&kp ESC         &kp HOME        &kp UP_ARROW    &kp END          &kp PAGE_UP    &to 3         &kp N7        &kp N8        &kp N9        &kp MINUS
+&kp LEFT_SHIFT  &kp LEFT_ARROW  &kp DOWN        &kp RIGHT_ARROW  &kp PAGE_DOWN  &kp SLASH     &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6  &kp PLUS
+&kp PLUS        &kp EQUAL       &kp UNDERSCORE  &kp MINUS        &kp CAPS       &kp ASTERISK  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp ENTER
+                                &trans          &trans           &trans         &trans        &kp NUMBER_0  &kp DOT
+            >;
+        };
+
+        Nav-Num-Lock {
+            bindings = <
+&kp ESC         &kp HOME        &kp UP_ARROW    &kp END          &kp PAGE_UP    &to 0         &kp N7        &kp N8        &kp N9        &kp MINUS
+&kp LEFT_SHIFT  &kp LEFT_ARROW  &kp DOWN        &kp RIGHT_ARROW  &kp PAGE_DOWN  &kp SLASH     &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6  &kp PLUS
+&kp PLUS        &kp EQUAL       &kp UNDERSCORE  &kp MINUS        &kp CAPS       &kp ASTERISK  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp ENTER
+                                &trans          &trans           &trans         &trans        &kp NUMBER_0  &kp DOT
             >;
         };
 
