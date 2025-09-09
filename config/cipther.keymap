@@ -75,10 +75,10 @@
             //                  | GUI | LWR | SPC |   | ENT | RSE  | ALT |
 
             bindings = <
-&lt 5 Q          &kp W            &kp E      &kp R              &kp T           &kp Y        &kp U               &kp I               &kp O    &lt 5 P
-&lt 3 A          &kp S            &kp D      &hml LEFT_SHIFT F  &kp G           &kp H        &hmr RIGHT_SHIFT J  &kp K               &kp L    &lt 3 SEMICOLON
-&hml LEFT_GUI Z  &hml LEFT_ALT X  &kp C      &kp V              &kp B           &kp N        &kp M               &kp COMMA           &kp DOT  &hml RIGHT_GUI SLASH
-                                  &lt 3 TAB  &lt 1 BACKSPACE    &hml LCTRL ESC  &lt 4 ENTER  &lt 1 SPACE         &lt 3 SINGLE_QUOTE
+&lt 5 Q          &kp W            &kp E      &kp R              &kp T           &kp Y        &kp U               &kp I               &kp O         &lt 5 P
+&lt 3 A          &hml LCTRL S     &lt 3 D    &hml LEFT_SHIFT F  &kp G           &kp H        &hmr RIGHT_SHIFT J  &lt 3 K             &hmr RCTRL L  &lt 3 SEMICOLON
+&hml LEFT_GUI Z  &hml LEFT_ALT X  &kp C      &kp V              &kp B           &kp N        &kp M               &kp COMMA           &kp DOT       &hml RIGHT_GUI SLASH
+                                  &lt 3 TAB  &lt 1 BACKSPACE    &hml LCTRL TAB  &lt 4 ENTER  &lt 1 SPACE         &lt 3 SINGLE_QUOTE
             >;
         };
 
@@ -108,10 +108,10 @@
 
         Symbols {
             bindings = <
-&kp EXCLAMATION  &kp AT_SIGN  &kp HASH  &kp DOLLAR         &kp PERCENT  &kp CARET  &kp AMPERSAND     &kp ASTERISK       &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS
-&kp BACKSLASH    &kp PIPE     &kp PLUS  &kp EQUAL          &none        &none      &kp UNDERSCORE    &kp MINUS          &kp LBRC              &kp RIGHT_BRACE
-&kp TILDE        &kp GRAVE    &none     &none              &none        &none      &kp SINGLE_QUOTE  &kp DOUBLE_QUOTES  &kp LEFT_BRACKET      &kp RIGHT_BRACKET
-                              &trans    &kp DOUBLE_QUOTES  &none        &none      &kp SINGLE_QUOTE  &trans
+&kp EXCLAMATION  &kp AT_SIGN  &kp HASH   &kp DOLLAR      &kp PERCENT  &kp CARET  &kp AMPERSAND     &kp ASTERISK       &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS
+&kp BACKSLASH    &kp PIPE     &kp MINUS  &kp UNDERSCORE  &none        &none      &kp SINGLE_QUOTE  &kp DOUBLE_QUOTES  &kp LBRC              &kp RIGHT_BRACE
+&kp TILDE        &kp GRAVE    &none      &none           &none        &none      &none             &none              &kp LEFT_BRACKET      &kp RIGHT_BRACKET
+                              &trans     &trans          &trans       &trans     &trans            &trans
             >;
         };
 
@@ -131,6 +131,15 @@
         };
 
         System {
+            bindings = <
+&trans       &trans  &trans  &trans  &trans  &none   &trans  &trans  &trans  &trans
+&trans       &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&bootloader  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &bootloader
+                     &trans  &trans  &trans  &trans  &trans  &trans
+            >;
+        };
+
+        System-backup {
             bindings = <
 &trans          &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &to 0   &none   &trans  &trans  &trans  &trans
 &bt BT_CLR_ALL  &trans        &trans        &trans        &trans  &trans  &trans  &trans  &trans  &trans
