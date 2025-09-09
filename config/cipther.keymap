@@ -90,19 +90,19 @@
             //                  | GUI |     | SPC |   | ENT |     | ALT |
 
             bindings = <
-&to 2           &kp HOME        &kp UP_ARROW  &kp END          &kp PAGE_UP    &kp COMMA     &kp N7        &kp N8        &kp N9        &kp MINUS
-&kp LEFT_SHIFT  &kp LEFT_ARROW  &kp DOWN      &kp RIGHT_ARROW  &kp PAGE_DOWN  &kp SLASH     &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6  &kp PLUS
-&none           &none           &none         &none            &kp CAPS       &kp ASTERISK  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp EQUAL
-                                &trans        &trans           &trans         &kp ENTER     &kp NUMBER_0  &kp DOT
+&to 2           &kp HOME        &kp UP_ARROW  &kp END          &kp PAGE_UP    &kp SLASH       &kp N7        &kp N8        &kp N9        &kp MINUS
+&kp LEFT_SHIFT  &kp LEFT_ARROW  &kp DOWN      &kp RIGHT_ARROW  &kp PAGE_DOWN  &kp ASTERISK    &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6  &kp PLUS
+&none           &none           &none         &none            &kp CAPS       &kp UNDERSCORE  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &hmr RGUI EQUAL
+                                &trans        &trans           &trans         &trans          &kp NUMBER_0  &kp DOT
             >;
         };
 
         Nav-Num-Lock {
             bindings = <
-&to 1           &kp HOME        &kp UP_ARROW  &kp END          &kp PAGE_UP    &kp COMMA     &kp N7        &kp N8        &kp N9        &kp MINUS
-&kp LEFT_SHIFT  &kp LEFT_ARROW  &kp DOWN      &kp RIGHT_ARROW  &kp PAGE_DOWN  &kp SLASH     &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6  &kp PLUS
-&none           &none           &none         &none            &kp CAPS       &kp ASTERISK  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &hmr RIGHT_GUI EQUAL
-                                &trans        &trans           &trans         &kp ENTER     &kp NUMBER_0  &kp DOT
+&to 1           &kp HOME        &kp UP_ARROW  &kp END          &kp PAGE_UP    &kp SLASH       &kp N7        &kp N8        &kp N9        &kp MINUS
+&kp LEFT_SHIFT  &kp LEFT_ARROW  &kp DOWN      &kp RIGHT_ARROW  &kp PAGE_DOWN  &kp ASTERISK    &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6  &kp PLUS
+&none           &none           &none         &none            &kp CAPS       &kp UNDERSCORE  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &hmr RIGHT_GUI EQUAL
+                                &trans        &trans           &trans         &trans          &kp NUMBER_0  &kp DOT
             >;
         };
 
