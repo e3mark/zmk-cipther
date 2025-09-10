@@ -132,14 +132,14 @@
 
         System {
             bindings = <
-&trans       &trans  &trans  &trans  &trans  &none   &trans  &trans  &trans  &trans
-&trans       &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&bootloader  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &bootloader
-                     &trans  &trans  &trans  &trans  &trans  &trans
+&trans       &trans          &trans  &trans  &trans  &none   &trans  &trans  &trans        &trans
+&trans       &trans          &trans  &trans  &trans  &trans  &trans  &trans  &trans        &trans
+&bootloader  &bt BT_CLR_ALL  &trans  &trans  &trans  &trans  &trans  &trans  &bt BT_SEL 0  &bootloader
+                             &trans  &trans  &trans  &trans  &trans  &trans
             >;
         };
 
-        System-backup {
+        System-bt {
             bindings = <
 &trans          &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &to 0   &none   &trans  &trans  &trans  &trans
 &bt BT_CLR_ALL  &trans        &trans        &trans        &trans  &trans  &trans  &trans  &trans  &trans
