@@ -75,10 +75,10 @@
             //                  | GUI | LWR | SPC |   | ENT | RSE  | ALT |
 
             bindings = <
-&lt 5 Q          &kp W            &kp E      &kp R              &kp T           &kp Y        &kp U               &kp I               &kp O         &lt 5 P
-&lt 3 A          &hml LCTRL S     &lt 3 D    &hml LEFT_SHIFT F  &kp G           &kp H        &hmr RIGHT_SHIFT J  &lt 3 K             &hmr RCTRL L  &lt 3 SEMICOLON
-&hml LEFT_GUI Z  &hml LEFT_ALT X  &kp C      &kp V              &kp B           &kp N        &kp M               &kp COMMA           &kp DOT       &hml RIGHT_GUI SLASH
-                                  &lt 3 TAB  &lt 1 BACKSPACE    &hml LCTRL TAB  &lt 4 ENTER  &lt 1 SPACE         &lt 3 SINGLE_QUOTE
+&lt 5 Q          &kp W            &kp E        &kp R              &kp T           &kp Y        &kp U               &kp I               &kp O    &lt 5 P
+&kp A            &kp S            &lt 3 D      &hml LEFT_SHIFT F  &kp G           &kp H        &hmr RIGHT_SHIFT J  &lt 3 K             &kp L    &kp SEMICOLON
+&hml LEFT_GUI Z  &hml LEFT_ALT X  &kp C        &kp V              &kp B           &kp N        &kp M               &kp COMMA           &kp DOT  &hml RIGHT_GUI SLASH
+                                  &lt 3 MINUS  &lt 1 BACKSPACE    &hml LCTRL TAB  &lt 4 ENTER  &lt 1 SPACE         &lt 3 SINGLE_QUOTE
             >;
         };
 
@@ -90,18 +90,18 @@
             //                  | GUI |     | SPC |   | ENT |     | ALT |
 
             bindings = <
-&to 2           &kp HOME        &kp UP_ARROW  &kp END          &kp PAGE_UP    &kp SLASH       &kp N7        &kp N8        &kp N9        &kp MINUS
+&kp ESCAPE      &kp HOME        &kp UP_ARROW  &kp END          &kp PAGE_UP    &kp SLASH       &kp N7        &kp N8        &kp N9        &kp MINUS
 &kp LEFT_SHIFT  &kp LEFT_ARROW  &kp DOWN      &kp RIGHT_ARROW  &kp PAGE_DOWN  &kp ASTERISK    &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6  &kp PLUS
-&none           &none           &none         &none            &kp CAPS       &kp UNDERSCORE  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &hmr RGUI EQUAL
+&to 2           &none           &none         &none            &kp CAPS       &kp UNDERSCORE  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &hmr RGUI EQUAL
                                 &trans        &trans           &trans         &trans          &kp NUMBER_0  &kp DOT
             >;
         };
 
         Nav-Num-Lock {
             bindings = <
-&to 1           &kp HOME        &kp UP_ARROW  &kp END          &kp PAGE_UP    &kp SLASH       &kp N7        &kp N8        &kp N9        &kp MINUS
+&kp ESCAPE      &kp HOME        &kp UP_ARROW  &kp END          &kp PAGE_UP    &kp SLASH       &kp N7        &kp N8        &kp N9        &kp MINUS
 &kp LEFT_SHIFT  &kp LEFT_ARROW  &kp DOWN      &kp RIGHT_ARROW  &kp PAGE_DOWN  &kp ASTERISK    &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6  &kp PLUS
-&none           &none           &none         &none            &kp CAPS       &kp UNDERSCORE  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &hmr RIGHT_GUI EQUAL
+&to 1           &none           &none         &none            &kp CAPS       &kp UNDERSCORE  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &hmr RIGHT_GUI EQUAL
                                 &trans        &trans           &trans         &trans          &kp NUMBER_0  &kp DOT
             >;
         };
