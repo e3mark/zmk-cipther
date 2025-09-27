@@ -42,16 +42,31 @@
     combos {
         compatible = "zmk,combos";
 
-        func {
-            bindings = <&none>;
+        underscore {
+            bindings = <&kp UNDERSCORE>;
             key-positions = <2 3>;
             layers = <4>;
         };
 
-        sym {
-            bindings = <&none>;
+        dash {
+            bindings = <&kp MINUS>;
             key-positions = <22 23>;
             layers = <3>;
+        };
+
+        enter {
+            bindings = <&kp ENTER>;
+            key-positions = <16 17 18>;
+        };
+
+        single-quote {
+            bindings = <&kp SINGLE_QUOTE>;
+            key-positions = <12 13>;
+        };
+
+        double-quote {
+            bindings = <&kp DOUBLE_QUOTES>;
+            key-positions = <16 17>;
         };
     };
 
@@ -132,10 +147,10 @@
 
         System {
             bindings = <
-&trans       &trans          &trans  &trans  &trans  &none   &trans  &trans  &trans        &trans
+&trans       &trans          &trans  &trans  &to 0   &none   &trans  &trans  &trans        &trans
 &trans       &trans          &trans  &trans  &trans  &trans  &trans  &trans  &trans        &trans
 &bootloader  &bt BT_CLR_ALL  &trans  &trans  &trans  &trans  &trans  &trans  &bt BT_SEL 0  &bootloader
-                             &trans  &trans  &trans  &trans  &trans  &trans
+                             &trans  &trans  &trans  &trans  &trans  &to 7
             >;
         };
 
@@ -145,6 +160,15 @@
 &bt BT_CLR_ALL  &trans        &trans        &trans        &trans  &trans  &trans  &trans  &trans  &trans
 &bootloader     &trans        &trans        &trans        &trans  &trans  &trans  &trans  &trans  &bootloader
                               &trans        &trans        &trans  &trans  &trans  &trans
+            >;
+        };
+
+        Zombiod {
+            bindings = <
+&kp ESC         &kp Q  &kp W         &kp E      &kp R         &kp Y        &kp U               &kp I               &kp O    &lt 5 P
+&kp LEFT_SHIFT  &kp A  &kp S         &kp D      &kp F         &kp H        &hmr RIGHT_SHIFT J  &lt 3 K             &kp L    &kp SEMICOLON
+&kp RCTRL       &kp Z  &kp X         &kp C      &kp V         &kp N        &kp M               &kp COMMA           &kp DOT  &hml RIGHT_GUI SLASH
+                       &kp NUMBER_1  &kp SPACE  &kp NUMBER_2  &lt 4 ENTER  &lt 1 SPACE         &lt 3 SINGLE_QUOTE
             >;
         };
     };
