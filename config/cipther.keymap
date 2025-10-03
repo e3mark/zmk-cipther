@@ -137,6 +137,18 @@
             key-positions = <26 27 28>;
             layers = <0>;
         };
+
+        bootloader_1 {
+            bindings = <&bootloader>;
+            key-positions = <0 1 2 3 4 20>;
+            layers = <0>;
+        };
+
+        bootloader_2 {
+            bindings = <&bootloader>;
+            key-positions = <5 6 7 8 9 29>;
+            layers = <0>;
+        };
     };
 
     macros {
