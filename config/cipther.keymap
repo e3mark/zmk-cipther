@@ -42,13 +42,13 @@
     combos {
         compatible = "zmk,combos";
 
-        dash {
-            bindings = <&mt LEFT_ALT MINUS>;
+        tab {
+            bindings = <&mt LEFT_ALT TAB>;
             key-positions = <12 13>;
             layers = <0>;
         };
 
-        enter {
+        enter_1 {
             bindings = <&kp ENTER>;
             key-positions = <16 17 18>;
             layers = <0>;
@@ -61,13 +61,13 @@
         };
 
         double-quote {
-            bindings = <&kp DOUBLE_QUOTES>;
+            bindings = <&mt RIGHT_GUI DOUBLE_QUOTES>;
             key-positions = <17 18>;
             layers = <0>;
         };
 
-        tab {
-            bindings = <&kp TAB>;
+        enter_2 {
+            bindings = <&kp ENTER>;
             key-positions = <11 12 13>;
             layers = <0>;
         };
@@ -117,12 +117,6 @@
         compare_2 {
             bindings = <&kp GREATER_THAN>;
             key-positions = <27 28 26>;
-            layers = <0>;
-        };
-
-        underscore {
-            bindings = <&mt LEFT_GUI UNDERSCORE>;
-            key-positions = <12 11>;
             layers = <0>;
         };
     };
